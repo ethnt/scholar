@@ -4,3 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 Scholar::Application.load_tasks
+
+task :default do
+  exec('bundle exec rspec && bundle exec cucumber')
+end
